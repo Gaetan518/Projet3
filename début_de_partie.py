@@ -1,7 +1,9 @@
 import csv 
 liste_mot = open("liste_mot.csv") 
-t1 = list(csv.DictReader(liste_mot, delimiter=";")) 
+t1 = list(csv.DictReader(liste_mot, delimiter = ";")) 
 
-def mot_hasard():
-    import random
-    hasard = random.choice(t1)
+import random
+def mot_hasard(t1): 
+    mot = random.choice(t1)
+    return mot
+mot_hasard(t1)
