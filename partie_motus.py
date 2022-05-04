@@ -24,11 +24,8 @@ verif_mot(input("Entrez votre proposition: "),mot_de_gaetan)
 
 
 def nombre_lettre(mot):
-    nb_lettre = 0
-    for lettre in len(mot):
-        if lettre in mot:
-            nb_lettre += 1
-            print("Le mot choisi contient",nb_lettre,"lettres.")
+    """Compter le nombre de lettres du mot choisi"""
+    return len(mot)
 
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
