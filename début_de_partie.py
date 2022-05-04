@@ -15,3 +15,7 @@ def nombre_lettre(mot):
             nb_lettre += 1
             print("Le mot choisi contient",nb_lettre,"lettres.")
 nombre_lettre(mot)
+
+def nombre_lettre(mot):
+    """Compter le nombre de lettres du mot choisi"""
+    return len(mot)
