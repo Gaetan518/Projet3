@@ -1,3 +1,6 @@
+import csv 
+import random
+
 def fin_de_partie(lettre):
     win ="Tu as Gagné"
     lose = "Tu as Perdu"
@@ -6,25 +9,17 @@ def fin_de_partie(lettre):
     
     for i in range(6):
         if lettre != mot:
-            compteur - 1 #si toutes les lettres sont égales a mots, joueur gagne sinon deduire 1 de compteur
+            compteur - 1 #si toute les lettres sont égale a mots, joueur gangne sinon deduire 1 de compteur
         else:
             return win
         if compteur == 0: #si compteur d'essai = 0, joueur a perdu
             return lose
-        if compteur > 0:  #si mot trouvé avant que compteur soit = a 0 , point += compteur d'essai restant
+        if compteur > 0:  #si mot trouvé avant que compteur soit = a 0 , point += compteur d'aessai restant
                 compteur += points
                 
-                
-        
-import csv 
-liste_mot = open("liste_mot.csv") 
-t1 = list(csv.DictReader(liste_mot, delimiter = ";")) 
-
-import random
 def mot_hasard(t1): 
     mot = random.choice(t1)
     return mot
-mot_hasard(t1)
 
 def nombre_lettre(mot):
     nb_lettre = 0
@@ -32,10 +27,6 @@ def nombre_lettre(mot):
         if lettre in mot:
             nb_lettre += 1
             print("Le mot choisi contient",nb_lettre,"lettres.")
-nombre_lettre(mot)
-
-
-
 
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
@@ -48,8 +39,8 @@ def verif_lettre_mauvaise_place(let1, mot):
 
 def verif_mot(mot,mot2):
     """Vérifie que mot2 correspond à la variable mot à deviner
-    mot: str à deviner
-    mot2: str proposée
+    mot: str proposée
+    mot2: str à deviner
     """
 
     nouv_varia = [0,1,1,0,1]
@@ -60,3 +51,9 @@ def verif_mot(mot,mot2):
             print("mauvaise place")
         else:
             print("n'existe pas")
+            
+if __name__ == "__main__":
+    liste_mot = open("liste_mot.csv") 
+    liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
+    mot_a_deviner = mot_hasard(liste_de_mots)
+    verif_mot( ,mot_a_deviner )
