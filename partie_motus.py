@@ -18,6 +18,11 @@ def mot_hasard(t1):
     mot = random.choice(t1)
     return mot
 
+
+mot_de_gaetan = mot_hasard
+verif_mot(input("Entrez votre proposition: "),mot_de_gaetan) 
+
+
 def nombre_lettre(mot):
     nb_lettre = 0
     for lettre in len(mot):
@@ -54,3 +59,4 @@ if __name__ == "__main__":
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
     verif_mot( ,mot_a_deviner )
+    verif_mot(input("Entrez votre proposition: "),mot_de_gaetan)
