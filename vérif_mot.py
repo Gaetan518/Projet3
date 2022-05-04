@@ -1,4 +1,3 @@
-## Test
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
         return True
