@@ -9,13 +9,5 @@ def mot_hasard(t1):
 mot_hasard(t1)
 
 def nombre_lettre(mot):
-    nb_lettre = 0
-    for lettre in len(mot):
-        if lettre in mot:
-            nb_lettre += 1
-            print("Le mot choisi contient",nb_lettre,"lettres.")
-nombre_lettre(mot)
-
-def nombre_lettre(mot):
     """Compter le nombre de lettres du mot choisi"""
     return len(mot)
