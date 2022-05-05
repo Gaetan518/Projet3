@@ -7,33 +7,31 @@ def resultat(mot, lettre):
     
     for i in range(6):
         if lettre != mot:
-            compteur - 1 #si toutes les lettres = mots, joueur gagne sinon -1 au compteur
+            compteur - 1 #si toute les lettres = mots, joueur gangne sinon -1 au compteur
         else:
             return True
-        if compteur > 0:  #si mot trouvé avant que compteur = 0 , point += compteur d'essai restant
+        if compteur > 0:  #si mot trouvé avant que compteur soit = a 0 , point += compteur d'essai restant
                 compteur += points
                 return points
                 
-def mot_hasard(t1):
-    """Tire un mot au hasard parmi la liste de mot"""
+def mot_hasard(t1): 
     mot = random.choice(t1)
     return mot
 
 
-mot_de_gaetan = mot_hasard
-verif_mot(input("Entrez votre proposition: "),mot_de_gaetan) 
+    verif_mot = mot
+
+
+mot_de_gaetan = mot_hasard(t1)
+mot_a_entré(input("Entrez votre proposition: "),mot_de_gaetan) 
 
 
 def nombre_lettre(mot):
-    """ Compter le nombre de lettres du mot choisi
-        Retourne le nombre à l'utilisateur
-        mot = str à deviner
-    """
-    nb_lettres = 0
-    for i in range(len(mot)):
-        nb_lettres += 1
-    print("Le mot choisi contient",nb_lettres,"lettres")
-nombre_lettre("DESTINATIONS")
+    nb_lettre = 0
+    for lettre in len(mot):
+        if lettre in mot:
+            nb_lettre += 1
+            print("Le mot choisi contient",nb_lettre,"lettres.")
 
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
@@ -50,7 +48,6 @@ def verif_mot(mot,mot2):
     mot2: str à deviner
     """
 
-    nouv_varia = [0,1,1,0,1]
     for i in range (len(mot)):
         if verif_lettre_bon_place(mot[i], mot2[i]):
             print("bonne place")
@@ -58,10 +55,12 @@ def verif_mot(mot,mot2):
             print("mauvaise place")
         else:
             print("n'existe pas")
-            
+          
+        
+        verif_mot = mot
+        
 if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
-    verif_mot( ,mot_a_deviner )
-    verif_mot(input("Entrez votre proposition: "),mot_de_gaetan)
+    verif_mot(verif_mot,mot_a_deviner )
