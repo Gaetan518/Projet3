@@ -29,7 +29,7 @@ def nombre_lettre(mot):
         Retourne le nombre à l'utilisateur
         mot = str à deviner
     """
-    nb_lettres = 1
+    nb_lettres = 0
     for i in range(len(mot)):
         nb_lettres += 1
     print("Le mot choisi contient",nb_lettres,"lettres")
