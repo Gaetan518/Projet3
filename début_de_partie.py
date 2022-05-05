@@ -9,5 +9,12 @@ def mot_hasard(t1):
     return mot
 
 def nombre_lettre(mot):
-    """Compter le nombre de lettres du mot choisi"""
-    return len(mot)
+    """ Compter le nombre de lettres du mot choisi
+        Retourne le nombre à l'utilisateur
+        mot = str à deviner
+    """
+    nb_lettres = 1
+    for i in range(len(mot)):
+        nb_lettres += 1
+    print("Le mot choisi contient",nb_lettres,"lettres")
+nombre_lettre("DESTINATIONS")
