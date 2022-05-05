@@ -25,8 +25,15 @@ verif_mot(input("Entrez votre proposition: "),mot_de_gaetan)
 
 
 def nombre_lettre(mot):
-    """Compter le nombre de lettres du mot choisi"""
-    return len(mot)
+    """ Compter le nombre de lettres du mot choisi
+        Retourne le nombre à l'utilisateur
+        mot = str à deviner
+    """
+    nb_lettres = 1
+    for i in range(len(mot)):
+        nb_lettres += 1
+    print("Le mot choisi contient",nb_lettres,"lettres")
+nombre_lettre("DESTINATIONS")
 
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
