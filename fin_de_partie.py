@@ -1,12 +1,18 @@
-def resultat(mot, lettre):
-    compteur = 6
-    points = 0
+def win(lettre, mot):
+    win = "Tu as gagné"
+    if lettre == mot:
+        return win
     
-    for i in range(6):
-        if lettre != mot:
-            compteur - 1 #si toutes les lettres = mots, joueur gagne sinon -1 au compteur
-        else:
-            return True
-        if compteur > 0:  #si mot trouvé avant que compteur = 0 , point += compteur d'essai restant
-                compteur += points
-                return points
+def lose(lettre, mots):
+    lose = "tu as perdue"
+    if compteur == 0:
+        return lose
+    
+def retry(lettre, mot):
+    if lettre != mots:
+        compteur - 1
+    
+def point(compteur):
+    points = 0
+    if compteur >= 1:
+        points = compteur
