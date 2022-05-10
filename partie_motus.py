@@ -2,12 +2,10 @@ import csv
 """ Import du fichier csv qui contient la liste de mot """
 import random
 """ Import de la variable random pour tirer un mot au hasard dans la liste """
-compteur = 6
 
 def resultat(mot, lettre):
     compteur = 6
     points = 0
-
     
 def win(lettre, mot):
     """ Defini si le joueur a placer toute les lettre du mot choisidans la bonne place et 
