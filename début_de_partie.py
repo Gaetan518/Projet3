@@ -16,5 +16,4 @@ def nombre_lettre(mot):
     nb_lettres = 0
     for i in range(len(mot)):
         nb_lettres += 1
-    print("Le mot choisi contient",nb_lettres,"lettres")
-nombre_lettre("DESTINATIONS")
+        print("Le mot choisi contient",nb_lettres,"lettres")
