@@ -44,12 +44,8 @@ def mot_hasard(t1):
     mot = random.choice(t1)
     return mot
 
-
-    verif_mot = mot
-
-
 mot_de_gaetan = mot_hasard(t1)
-mot_a_entré(input("Entrez votre proposition: "),mot_de_gaetan) 
+mot_a_entrer(input("Entrez votre proposition: "),mot_de_gaetan) 
 
 
 def nombre_lettre(mot):
