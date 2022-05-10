@@ -19,7 +19,7 @@ def win(lettre, mot):
 
     def lose(lettre, mots):
     """ Defini si le joueur n'a pas placer toutes les lettres du mot dans la bonne place 
-    mais que le compteur est = 0 , le joueur perd et retourne un texte """
+        mais que le compteur est = 0 , le joueur perd et retourne un texte """
     lose = "tu as perdue"
     if compteur == 0:
         return lose
@@ -27,14 +27,14 @@ def win(lettre, mot):
     
 def retry(lettre, mot):
     """ Si le lettre du mot ne sont pas toute dans la bonne place mais que 
-    le compteur n'est pas a 0, le joueur a un nouvelle essai de deviner """
+        le compteur n'est pas a 0, le joueur a un nouvelle essai de deviner """
     if lettre != mots:
         compteur - 1
  
 
 def point(compteur):
     """ Quand le joueur a ganger, des points sont comptabiliser 
-    en fonction du nombre d'essai que le joueur a du utiliser """
+        en fonction du nombre d'essai que le joueur a du utiliser """
     points = 0
     if compteur >= 1:
         points = compteur
@@ -51,7 +51,6 @@ mot_a_entrer(input("Entrez votre proposition: "),mot_de_gaetan)
 def nombre_lettre(mot):
     nb_lettre = 0
     for lettre in len(mot):
-        if lettre in mot:
             nb_lettre += 1
             print("Le mot choisi contient",nb_lettre,"lettres.")
 
@@ -66,8 +65,8 @@ def verif_lettre_mauvaise_place(let1, mot):
 
 def verif_mot(mot,mot2):
     """ Vérifie que mot2 correspond à la variable mot à deviner
-    mot: str proposée
-    mot2: str à deviner """
+        mot: str proposée
+        mot2: str à deviner """
 
     for i in range (len(mot)):
         if verif_lettre_bon_place(mot[i], mot2[i]):
