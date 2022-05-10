@@ -1,9 +1,10 @@
-compteur = 6
-
+def resultat(mot, lettre):
+    compteur = 6
+    points = 0
 
 def win(lettre, mot):
     """Defini si le joueur a placer toute les lettre du mot choisidans la bonne place et 
-    que le compteur ne soit pas = 0 , le joueur gagne et retourne un texte. """
+       que le compteur ne soit pas = 0 , le joueur gagne et retourne un texte. """
     win = "Tu as gagné"
     if lettre == mot:
         return win
