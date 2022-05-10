@@ -8,10 +8,9 @@ def verif_lettre_mauvaise_place(let1, mot):
             return True
 
 def verif_mot(mot,mot2):
-    """Vérifie que mot2 correspond à la variable mot à deviner
-    mot: str à deviner
-    mot2: str proposée
-    """
+    """ Vérifie que mot2 correspond à la variable mot à deviner
+        mot: str à deviner
+        mot2: str proposée """
 
     nouv_varia = [0,1,1,0,1]
     for i in range (len(mot)):
