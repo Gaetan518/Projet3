@@ -1,5 +1,5 @@
 def resultat(mot, lettre):
-    compteur = 6
+    compteur = 6            #/!\ se sont des valeurs que nous devront implementer.
     points = 0
 
 def win(lettre, mot):
