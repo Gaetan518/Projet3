@@ -15,7 +15,7 @@ def win(lettre, mot):
         return win
     
 
-    def lose(lettre, mots):
+def lose(lettre, mots):
     """ Defini si le joueur n'a pas placer toutes les lettres du mot dans la bonne place 
         mais que le compteur est = 0 , le joueur perd et retourne un texte """
     lose = "tu as perdue"
