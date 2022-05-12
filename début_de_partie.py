@@ -4,9 +4,12 @@ t1 = list(csv.DictReader(liste_mot, delimiter = ";"))
 
 import random
 def mot_hasard(t1):
-     """ Tire un mot au hasard parmi la liste de mot """
+    """ Défini une variable pour le mot tiré au hasard """
+    string = ""
     mot = random.choice(t1)
-    return mot
+    for elem in mot.values():
+        string += elem.lower()
+    return string
 
 def nombre_lettre(mot):
     """ Compter le nombre de lettres du mot choisi
