@@ -11,8 +11,7 @@ def mot_hasard(t1):
 def nombre_lettre(mot):
     """ Compter le nombre de lettres du mot choisi
         Retourne le nombre à l'utilisateur
-        mot = str à deviner
-    """
+        mot = str à deviner """
     nb_lettres = 0
     for i in range(len(mot)):
         nb_lettres += 1
