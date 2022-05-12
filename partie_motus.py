@@ -38,13 +38,13 @@ def point(compteur):
         points = compteur
 
                 
-def mot_hasard(t1): 
+def mot_hasard(t1):
+    """ Défini une variable pour le mot tiré au hasard """
+    string = ""
     mot = random.choice(t1)
-    return mot
-
-mot_de_gaetan = mot_hasard(t1)
-mot_a_entrer(input("Entrez votre proposition: "),mot_de_gaetan) 
-
+    for elem in mot.values():
+        string += elem.lower()
+    return string
 
 def nombre_lettre(mot):
     nb_lettre = 0
@@ -73,12 +73,10 @@ def verif_mot(mot,mot2):
             print("mauvaise place")
         else:
             print("n'existe pas")
-          
-        
-        verif_mot = mot
-        
+         
 if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
-    verif_mot(verif_mot,mot_a_deviner )
+    phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, entrez votre proposition : "
+    verif_mot(input(phrase), mot_a_deviner)
