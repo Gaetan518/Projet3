@@ -28,3 +28,5 @@ def point(compteur):
     points = 0
     if compteur >= 1:
         points = compteur
+
+        
