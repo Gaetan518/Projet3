@@ -68,15 +68,18 @@ def verif_mot(mot,mot2):
 
     for i in range (len(mot)):
         if verif_lettre_bon_place(mot[i], mot2[i]):
-            print("bonne place")
+            print("bonne place :" ,mot[i])
         elif verif_lettre_mauvaise_place(mot[i], mot2):
-            print("mauvaise place")
+            print("mauvaise place :" ,mot[i])
         else:
-            print("n'existe pas")
-         
+            print("n'existe pas :" ,mot[i])
+    
 if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
     phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, entrez votre proposition : "
+    verif_mot(input(phrase), mot_a_deviner)
+
+while mot_a_deviner != phrase:
     verif_mot(input(phrase), mot_a_deviner)
