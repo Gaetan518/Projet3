@@ -3,32 +3,21 @@ import csv
 import random
 """ Import de la variable random pour tirer un mot au hasard dans la liste """
 
-def win(lettre, mot):
-    """ Défini si le joueur a placé toute les lettre du mot choisi dans la bonne place et 
-        que le compteur ne soit pas = 0, le joueur gagne et retourne un texte """
-    win = "Tu as gagné"
-    if lettre == mot:
-        return win
-    
-def loose(lettre, mot):
-    """ Défini si le joueur n'a pas placé toutes les lettres du mot dans la bonne place 
-        mais que le compteur est = 0, le joueur perd et retourne un texte """
-    loose = "Tu as perdu"
-    if compteur == 0:
-        return loose
-    
-def retry(lettre, mot):
-    """ Si la lettre du mot n'est pas à la bonne place mais que 
-        le compteur n'est pas a 0, le joueur a un nouvel essai """
-    if lettre != mot:
-        compteur - 1
 
-def points(compteur):
-    """ Quand le joueur a gagné, des points sont comptabilisés 
-        en fonction du nombre d'essais que le joueur a dû utilisé """
-    points = 0
-    if compteur >= 1:
-        points = compteur
+def resultat(lettre, compteur, mot):
+    """Quand le joueur a trouvé le mot la fonction renvoi win, si le joueur 
+    n'a pas trouvé mais est = a 0, elle renvois loose,
+    si le joueur n'a pas trouvé mais le compteur n'est pas = a 0 il a encore des essais"""
+    win = "Tu as gagné"
+    loose = "Tu as perdu"
+    if lettre == mot:
+        return True
+    else:
+        compteur == 0
+        return False
+    if lettre != mot:
+        compteur = compteur - 1
+        return compteur
          
 def mot_hasard(t1):
     """ Tire un mot au hasard dans la liste et défini sa variable """
@@ -66,7 +55,7 @@ def verif_mot(mot,mot2):
             print("mauvaise place :" ,mot[i])
         else:
             print("n'existe pas :" ,mot[i])
-    
+            
 compteur = 6        
 if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
@@ -75,4 +64,4 @@ if __name__ == "__main__":
     phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, entrez votre proposition : "
     for i in range(compteur):
         verif_mot(input(phrase), mot_a_deviner)
-        resultat(mot_a_deviner,mot_hasard,compteur
+        resultat(mot_a_deviner,mot_hasard,compteur)
