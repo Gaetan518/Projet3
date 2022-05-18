@@ -3,10 +3,6 @@ import csv
 import random
 """ Import de la variable random pour tirer un mot au hasard dans la liste """
 
-def resultat(mot, lettre):
-    compteur = 6
-    points = 0
-
 def win(lettre, mot):
     """ Défini si le joueur a placé toute les lettre du mot choisi dans la bonne place et 
         que le compteur ne soit pas = 0, le joueur gagne et retourne un texte """
@@ -71,12 +67,12 @@ def verif_mot(mot,mot2):
         else:
             print("n'existe pas :" ,mot[i])
     
+compteur = 6        
 if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
     phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, entrez votre proposition : "
-    verif_mot(input(phrase), mot_a_deviner)
-        
-while mot_a_deviner != phrase:
-    verif_mot(input(phrase), mot_a_deviner)
+    for i in range(compteur):
+        verif_mot(input(phrase), mot_a_deviner)
+        resultat(mot_a_deviner,mot_hasard,compteur
