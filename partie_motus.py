@@ -27,13 +27,6 @@ def mot_hasard(t1):
         string += elem.lower()
     return string
 
-def nombre_lettre(mot):
-    """ Défini le nombre de lettres du mot choisi en utilisant une boucle """
-    nb_lettre = 0
-    for lettre in len(mot):
-        nb_lettre += 1
-        print("Le mot choisi contient",nb_lettre,"lettres.")
-
 def verif_lettre_bon_place(let1, let2):
     if ord(let1) == ord(let2):
         return True
@@ -61,7 +54,7 @@ if __name__ == "__main__":
     liste_mot = open("liste_mot.csv") 
     liste_de_mots = list(csv.DictReader(liste_mot, delimiter = ";"))
     mot_a_deviner = mot_hasard(liste_de_mots)
-    phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, entrez votre proposition : "
+    phrase = "Mot de "+str(len(mot_a_deviner))+" caractères, il vous reste ",compteur," tentatives, entrez votre proposition : "
     for i in range(compteur):
         verif_mot(input(phrase), mot_a_deviner)
         resultat(mot_a_deviner,mot_hasard,compteur)
