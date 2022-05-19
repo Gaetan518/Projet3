@@ -1,8 +1,8 @@
 import csv 
+import random
 liste_mot = open("liste_mot.csv") 
 t1 = list(csv.DictReader(liste_mot, delimiter = ";")) 
 
-import random
 def mot_hasard(t1):
     """ Défini une variable pour le mot tiré au hasard """
     string = ""
